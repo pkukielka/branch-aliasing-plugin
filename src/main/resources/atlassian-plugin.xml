@@ -1,0 +1,26 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="branch-aliasing-plugin"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="branch-aliasing-plugin-resources" name="branch-aliasing-plugin Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <context>branch-aliasing-plugin</context>
+    </web-resource>
+
+    <repository-hook key="branch-aliasing-plugin" name="Branch Aliasing Hook"
+                     class="com.ms.msde.stash.hook.alias.BranchAliasingRepositoryHook">
+        <description>Makes sure configured branch aliases points to the proper ref</description>
+        <config-form name="Branch Aliasing Hook Config" key="branchAliasing-config">
+            <view>com.ms.msde.stash.hook.alias.config.formContents</view>
+            <directory location="/static/"/>
+        </config-form>
+    </repository-hook>
+
+</atlassian-plugin>

@@ -1,0 +1,85 @@
+{namespace com.ms.msde.stash.hook.alias.config}
+
+/**
+ * @param config
+ */
+{template .formContents}
+
+    <table class="aui" id="main-table">
+        <tbody>
+        <tr>
+            <td>
+                {call bitbucket.component.branchSelector.field}
+                    {param id: 'branchName1' /}
+                    {param labelText: 'Branch 1' /}
+                    {param initialValue: $config['branchName1'] /}
+                {/call}
+            </td>
+            <td>
+                {call bitbucket.component.branchSelector.field}
+                    {param id: 'aliasName1' /}
+                    {param labelText: 'Alias 1' /}
+                    {param initialValue: $config['aliasName1'] /}
+                {/call}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {call bitbucket.component.branchSelector.field}
+                    {param id: 'branchName2' /}
+                    {param labelText: 'Branch 2' /}
+                {/call}
+            </td>
+            <td>
+                {call bitbucket.component.branchSelector.field}
+                    {param id: 'aliasName2' /}
+                    {param labelText: 'Alias 2' /}
+                {/call}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {call bitbucket.component.branchSelector.field}
+                    {param id: 'branchName3' /}
+                    {param labelText: 'Branch 3' /}
+                {/call}
+            </td>
+            <td>
+                {call bitbucket.component.branchSelector.field}
+                    {param id: 'aliasName3' /}
+                    {param labelText: 'Alias 3' /}
+                {/call}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {call bitbucket.component.branchSelector.field}
+                    {param id: 'branchName4' /}
+                    {param labelText: 'Branch 4' /}
+                {/call}
+            </td>
+            <td>
+                {call bitbucket.component.branchSelector.field}
+                    {param id: 'aliasName4' /}
+                    {param labelText: 'Alias 4' /}
+                {/call}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {call bitbucket.component.branchSelector.field}
+                    {param id: 'branchName5' /}
+                    {param labelText: 'Branch 5' /}
+                {/call}
+            </td>
+            <td>
+                {call bitbucket.component.branchSelector.field}
+                    {param id: 'aliasName5' /}
+                    {param labelText: 'Alias 5' /}
+                {/call}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    {call aui.renderExtraAttributes data="all" /}
+{/template}
